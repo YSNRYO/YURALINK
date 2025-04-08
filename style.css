@@ -1,0 +1,354 @@
+/* General Styles */
+body {
+    font-family: sans-serif; /* Will refine font later */
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    line-height: 1.6;
+}
+
+a {
+    color: #4CAF50; /* Green accent */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+    color: #ffffff;
+}
+
+.highlight {
+    color: #4CAF50; /* Green highlight */
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(18, 18, 18, 0.8); /* Slightly transparent dark */
+    padding: 1rem 5%;
+    position: fixed; /* Sticky header */
+    width: 90%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Optional: blur effect */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* Main Content Area */
+main {
+    padding-top: 80px; /* Adjust based on header height */
+}
+
+section {
+    padding: 60px 5%;
+    text-align: center;
+    min-height: 70vh; /* Give sections some height */
+    border-bottom: 1px solid #333; /* Separator */
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9)), url('placeholder-bg.jpg'); /* Add a background image later */
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.cta-boxes {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cta-box {
+    background-color: rgba(30, 30, 30, 0.8); /* Darker box background */
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+.cta-box .icon {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    display: block;
+    color: #4CAF50;
+    /* Placeholder for actual icons */
+}
+
+.cta-box h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    text-decoration: none;
+}
+
+
+/* Footer */
+footer {
+    background-color: #1c1c1c; /* Slightly lighter dark */
+    color: #a0a0a0;
+    padding: 40px 5%;
+    margin-top: 40px; /* Space above footer */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Handle smaller screens */
+    gap: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2rem;
+}
+
+.footer-logo h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+/* About Section */
+#about {
+    background-color: #1a1a1a; /* Slightly different dark shade */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack mission and why-choose */
+    align-items: center; /* Center content */
+    gap: 3rem;
+    max-width: 900px; /* Limit width */
+    margin: 0 auto; /* Center the container */
+    text-align: left; /* Align text left within the boxes */
+}
+
+.mission, .why-choose {
+    background-color: #222; /* Box background */
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    width: 100%; /* Take full width of container */
+}
+
+.mission h3, .why-choose h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8em;
+    color: #ffffff;
+}
+
+.why-choose .features {
+    display: flex;
+    justify-content: space-around; /* Space out feature boxes */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.feature-box {
+    background-color: #2a2a2a; /* Slightly lighter box */
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1; /* Allow boxes to grow */
+    min-width: 200px; /* Minimum width before wrapping */
+    border: 1px solid #555;
+}
+
+.feature-box .icon {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    display: block;
+    color: #4CAF50;
+    /* Placeholder for actual icons */
+}
+
+/* Initially hide all sections except home */
+.section-container {
+    display: none;
+}
+
+/* Logo Styling */
+.logo img {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    display: block; /* Remove any extra text spacing */
+}
+
+.footer-logo img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+    display: block; /* Remove any extra text spacing */
+}
+
+/* Forms General */
+.inquiry-form, .application-form { /* Apply to both forms */
+    max-width: 600px;
+    margin: 2rem auto; /* Center form */
+    padding: 2rem;
+    background-color: #222; /* Dark background for form */
+    border-radius: 8px;
+    border: 1px solid #444;
+    text-align: left; /* Align labels/inputs left */
+}
+
+.inquiry-form h3, .application-form h3 { /* Form sub-heading */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-size: 1.6em;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    background-color: #333; /* Dark input background */
+    color: #e0e0e0; /* Light input text */
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+    font-size: 1em;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group input[type="number"]::placeholder,
+.form-group textarea::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resize */
+    min-height: 80px;
+}
+
+/* Center the submit button */
+.inquiry-form button[type="submit"],
+.application-form button[type="submit"] {
+    display: block; /* Make it block to center with margin */
+    width: auto; /* Adjust width automatically */
+    margin: 1rem auto 0; /* Center horizontally */
+    padding: 0.8rem 2rem; /* Adjust padding */
+}
+
+.feature-box h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2em;
+}
+
+.footer-links h4, .footer-contact h4 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+    color: #a0a0a0;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9em;
+    padding-top: 1rem;
+}

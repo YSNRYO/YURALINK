@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YURALINK - Connect Influencers with Companies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home"><img src="yuralink_logo.png" alt="YURALINK"></a>
+            </div>
+            <ul>
+                <li><a href="#" data-section="home">Home</a></li>
+                <li><a href="#" data-section="about">About</a></li>
+                <li><a href="#" data-section="companies">Companies</a></li>
+                <li><a href="#" data-section="influencers">Influencers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home" class="section-container">
+            <section class="hero">
+                <h1>Connect <span class="highlight">Influencers</span> with <span class="highlight">Companies</span></h1>
+                <p>YURALINK bridges the gap between brands and content creators, enabling powerful collaborations that drive engagement and growth.</p>
+                <div class="cta-boxes">
+                    <div class="cta-box">
+                        <span class="icon"><i class="fas fa-building"></i></span>
+                        <h2>I'm a Company</h2>
+                        <p>Find the perfect influencers to promote your brand and products to reach your target audience effectively.</p>
+                        <a href="#" data-section="companies" class="btn">Start a Campaign</a>
+                    </div>
+                    <div class="cta-box">
+                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <h2>I'm an Influencer</h2>
+                        <p>Connect with brands that align with your content and audience, and turn your influence into profitable partnerships.</p>
+                        <a href="#" data-section="influencers" class="btn">Join Our Network</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="about" class="section-container">
+            <section>
+                <h2>About YURALINK</h2>
+                <div class="about-content">
+                    <div class="mission">
+                        <h3>Our Mission</h3>
+                        <p>YURALINK was founded with a clear mission: to revolutionize how brands and content creators collaborate in the digital space.</p>
+                        <p>We believe in creating authentic partnerships that benefit both parties while delivering engaging content to audiences worldwide.</p>
+                    </div>
+                    <div class="why-choose">
+                        <h3>Why Choose YURALINK?</h3>
+                        <div class="features">
+                            <div class="feature-box">
+                                <span class="icon"><i class="fas fa-check-circle"></i></span>
+                                <h4>Verified Creators</h4>
+                                <p>We thoroughly vet all influencers in our network to ensure quality and authenticity.</p>
+                            </div>
+                            <div class="feature-box">
+                                <span class="icon"><i class="fas fa-bolt"></i></span>
+                                <h4>Fast Matching</h4>
+                                <p>Our proprietary algorithm quickly connects brands with the perfect influencers for their campaigns.</p>
+                            </div>
+                            <div class="feature-box">
+                                <span class="icon"><i class="fas fa-chart-line"></i></span>
+                                <h4>Campaign Analytics</h4>
+                                <p>Develop advanced metrics help you measure ROI and optimize your influencer marketing strategy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="companies" class="section-container">
+            <section>
+                <h2>Company Campaign Inquiry</h2>
+                <form action="https://formsubmit.co/blackstorm930%40gmail.com" method="POST" class="inquiry-form">
+                    <input type="hidden" name="_next" value="https://your-live-site-url.com/thankyou.html"> <!-- Optional: Replace with your live thank you page URL later -->
+                    <input type="hidden" name="_subject" value="New Company Campaign Inquiry!">
+                    <input type="hidden" name="_subject" value="New Company Campaign Inquiry!">
+                    <h3>Start a Campaign</h3>
+                    <div class="form-group">
+                        <label for="company-name">Company Name</label>
+                        <input type="text" id="company-name" name="company_name" placeholder="Your company name" required>
+                    <div class="form-group">
+                        <label for="contact-person">Contact Person</label>
+                        <input type="text" id="contact-person" name="contact_person" placeholder="Full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-company">Email Address</label>
+                        <input type="email" id="email-company" name="email_company" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="campaign-goal">Campaign Goal</label>
+                        <textarea id="campaign-goal" name="campaign_goal" rows="3" placeholder="What do you hope to achieve with this campaign?" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="campaign-budget">Campaign Budget</label>
+                        <input type="text" id="campaign-budget" name="campaign_budget" placeholder="Budget range (e.g., $5,000 - $10,000)">
+                    </div>
+                    <div class="form-group">
+                        <label for="preferred-platforms">Preferred Platforms</label>
+                        <input type="text" id="preferred-platforms" name="preferred_platforms" placeholder="Instagram, TikTok, YouTube, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="additional-notes">Additional Notes</label>
+                        <textarea id="additional-notes" name="additional_notes" rows="4" placeholder="Any other information you'd like to share."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit Campaign Inquiry</button>
+                    <p class="thank-you-message" style="display:none;">Thank you for your submission! We will contact you soon.</p>
+                </form>
+            </section>
+        </div>
+
+        <div id="influencers" class="section-container">
+            <section>
+                <h2>Influencer Application</h2>
+                <form action="https://formsubmit.co/blackstorm930%40gmail.com" method="POST" class="application-form">
+                    <input type="hidden" name="_next" value="https://your-live-site-url.com/thankyou.html"> <!-- Optional: Replace with your live thank you page URL later -->
+                    <input type="hidden" name="_subject" value="New Influencer Application!">
+                    <input type="hidden" name="_subject" value="New Influencer Application!">
+                    <h3>Join Our Network</h3>
+                    <div class="form-group">
+                        <label for="influencer-name">Full Name</label>
+                        <input type="text" id="influencer-name" name="influencer_name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-influencer">Email Address</label>
+                        <input type="email" id="email-influencer" name="email_influencer" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="social-media-handles">Social Media Handles</label>
+                        <input type="text" id="social-media-handles" name="social_media_handles" placeholder="@username (separate multiple handles with commas)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="primary-platform">Primary Platform</label>
+                        <input type="text" id="primary-platform" name="primary_platform" placeholder="Instagram, TikTok, YouTube, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="follower-count">Follower Count</label>
+                        <input type="text" id="follower-count" name="follower_count" placeholder="Approximate number of followers">
+                    </div>
+                     <div class="form-group">
+                        <label for="content-niche">Content Niche</label>
+                        <textarea id="content-niche" name="content_niche" rows="3" placeholder="What type of content do you create? (e.g., Beauty, Tech, Fitness)" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="additional-info">Additional Information</label>
+                        <textarea id="additional-info" name="additional_info" rows="4" placeholder="Tell us more about your content, audience, and previous brand collaborations"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit Application</button>
+                    <p class="thank-you-message" style="display:none;">Thank you for your submission! We will contact you soon.</p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="yuralink_logo.png" alt="YURALINK">
+                <p>Connecting influencers and brands for authentic, impactful collaborations in the digital landscape.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#companies">For Companies</a></li>
+                    <li><a href="#influencers">For Influencers</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@yuralink.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 YURALINK. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('header nav ul li a');
+            const sectionContainers = document.querySelectorAll('.section-container');
+
+            // Function to hide all sections
+            function hideAllSections() {
+                sectionContainers.forEach(section => {
+                    section.style.display = 'none';
+                });
+            }
+
+            // Function to show a specific section
+            function showSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.style.display = 'block';
+                }
+            }
+
+            // Initially hide all sections except for the 'home' section
+            hideAllSections();
+            showSection('home');
+
+            // Add click event listeners to the navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const sectionId = this.dataset.section;
+                    hideAllSections();
+                    showSection(sectionId);
+                });
+    
+                // Basic script for smooth scrolling (optional)
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        // Check if target element exists before scrolling
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                        }
+                    });
+                });
+    
+                // Handle form submissions
+                const forms = document.querySelectorAll('form');
+                forms.forEach(form => {
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault(); // Prevent actual submission
+                        const thankYouMessage = form.querySelector('.thank-you-message');
+                        if (thankYouMessage) {
+                            thankYouMessage.style.display = 'block'; // Show thank you message
+                        }
+                    });
+                });
+            });
+
+            // Add click event listeners to the CTA buttons
+            const ctaButtons = document.querySelectorAll('.cta-boxes .cta-box .btn');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const sectionId = this.dataset.section;
+                    hideAllSections();
+                    showSection(sectionId);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
