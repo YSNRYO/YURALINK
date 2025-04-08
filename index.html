@@ -229,7 +229,6 @@
                 const forms = document.querySelectorAll('form');
                 forms.forEach(form => {
                     form.addEventListener('submit', function (e) {
-                        e.preventDefault(); // Prevent actual submission
                         const thankYouMessage = form.querySelector('.thank-you-message');
                         if (thankYouMessage) {
                             thankYouMessage.style.display = 'block'; // Show thank you message
