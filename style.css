@@ -336,6 +336,52 @@ footer {
     padding: 0;
 }
 
+/* Custom Select Dropdown Styling */
+.select-wrapper {
+    position: relative;
+    display: inline-block; /* Or block if you want it full width like inputs */
+    width: 100%; /* Match input width */
+}
+
+.select-wrapper select {
+    /* Inherit base styles */
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+
+    /* Remove default appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Add padding for custom arrow */
+    padding-right: 2.5rem; /* Adjust as needed */
+    cursor: pointer;
+}
+
+/* Add custom arrow */
+.select-wrapper::after {
+    content: '\\25BC'; /* Unicode down arrow character */
+    position: absolute;
+    top: 50%;
+    right: 1rem; /* Position arrow */
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #e0e0e0; /* Arrow color */
+    pointer-events: none; /* Prevent arrow from interfering with select click */
+    z-index: 1;
+}
+
+/* Style for the 'Other' input (already inherits from general input rule) */
+#other-platform-input {
+    /* Add any specific styles if needed, e.g., margin */
+}
+
 .footer-links ul li {
     margin-bottom: 0.5rem;
 }
