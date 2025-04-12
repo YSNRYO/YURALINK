@@ -145,8 +145,22 @@
                         <input type="text" id="social-media-handles" name="social_media_handles" placeholder="@username (separate multiple handles with commas)" required>
                     </div>
                     <div class="form-group">
-                        <label for="primary-platform">Primary Platform</label>
-                        <input type="text" id="primary-platform" name="primary_platform" placeholder="Instagram, TikTok, YouTube, etc.">
+                        <label for="primary-platform-select">Primary Platform</label>
+                        <div class="select-wrapper">
+                            <select id="primary-platform-select" name="primary_platform" required>
+                                <option value="" disabled selected>Select a platform...</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="TikTok">TikTok</option>
+                                <option value="YouTube">YouTube</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Twitter/X">Twitter/X</option>
+                                <option value="Twitch">Twitch</option>
+                                <option value="Blog">Blog</option>
+                                <option value="Podcast">Podcast</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <input type="text" id="other-platform-input-influencer" name="other_platform" placeholder="Please specify other platform" style="display: none; margin-top: 10px;">
                     </div>
                     <div class="form-group">
                         <label for="follower-count">Follower Count</label>
@@ -275,7 +289,23 @@
                     }
                 });
             }
-        }); // End of DOMContentLoaded listener
+            // Handle 'Other' platform input visibility for Influencer form
+            const platformSelectInfluencer = document.getElementById('primary-platform-select');
+            const otherPlatformInputInfluencer = document.getElementById('other-platform-input-influencer');
+
+            if (platformSelectInfluencer && otherPlatformInputInfluencer) {
+                platformSelectInfluencer.addEventListener('change', function() {
+                    if (this.value === 'other') {
+                        otherPlatformInputInfluencer.style.display = 'block';
+                        otherPlatformInputInfluencer.required = true; // Make required if Other is selected
+                    } else {
+                        otherPlatformInputInfluencer.style.display = 'none';
+                        otherPlatformInputInfluencer.required = false; // Not required if other option selected
+                        otherPlatformInputInfluencer.value = ''; // Clear the value if hidden
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
