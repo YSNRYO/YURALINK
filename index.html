@@ -1,311 +1,409 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YURALINK - Connect Influencers with Companies</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#home"><img src="yuralink_logo.png" alt="YURALINK"></a>
-            </div>
-            <ul>
-                <li><a href="#" data-section="home">Home</a></li>
-                <li><a href="#" data-section="about">About</a></li>
-                <li><a href="#" data-section="companies">Companies</a></li>
-                <li><a href="#" data-section="influencers">Influencers</a></li>
-            </ul>
-        </nav>
-    </header>
+/* General Styles */
+body {
+    font-family: sans-serif; /* Will refine font later */
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    line-height: 1.6;
+}
 
-    <main>
-        <div id="home" class="section-container">
-            <section class="hero">
-                <h1>Connect <span class="highlight">Influencers</span> with <span class="highlight">Companies</span></h1>
-                <p>YURALINK bridges the gap between brands and content creators, enabling powerful collaborations that drive engagement and growth.</p>
-                <div class="cta-boxes">
-                    <div class="cta-box">
-                        <span class="icon"><i class="fas fa-building"></i></span>
-                        <h2>I'm a Company</h2>
-                        <p>Find the perfect influencers to promote your brand and products to reach your target audience effectively.</p>
-                        <a href="#" data-section="companies" class="btn">Start a Campaign</a>
-                    </div>
-                    <div class="cta-box">
-                        <span class="icon"><i class="fas fa-users"></i></span>
-                        <h2>I'm an Influencer</h2>
-                        <p>Connect with brands that align with your content and audience, and turn your influence into profitable partnerships.</p>
-                        <a href="#" data-section="influencers" class="btn">Join Our Network</a>
-                    </div>
-                </div>
-            </section>
-        </div>
+a {
+    color: #4CAF50; /* Green accent */
+    text-decoration: none;
+}
 
-        <div id="about" class="section-container">
-            <section>
-                <h2>About YURALINK</h2>
-                <div class="about-content">
-                    <div class="mission">
-                        <h3>Our Mission</h3>
-                        <p>YURALINK was founded with a clear mission: to revolutionize how brands and content creators collaborate in the digital space.</p>
-                        <p>We believe in creating authentic partnerships that benefit both parties while delivering engaging content to audiences worldwide.</p>
-                    </div>
-                    <div class="why-choose">
-                        <h3>Why Choose YURALINK?</h3>
-                        <div class="features">
-                            <div class="feature-box">
-                                <span class="icon"><i class="fas fa-check-circle"></i></span>
-                                <h4>Verified Creators</h4>
-                                <p>We thoroughly vet all influencers in our network to ensure quality and authenticity.</p>
-                            </div>
-                            <div class="feature-box">
-                                <span class="icon"><i class="fas fa-bolt"></i></span>
-                                <h4>Fast Matching</h4>
-                                <p>Our proprietary algorithm quickly connects brands with the perfect influencers for their campaigns.</p>
-                            </div>
-                            <div class="feature-box">
-                                <span class="icon"><i class="fas fa-chart-line"></i></span>
-                                <h4>Campaign Analytics</h4>
-                                <p>Develop advanced metrics help you measure ROI and optimize your influencer marketing strategy.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+a:hover {
+    text-decoration: underline;
+}
 
-        <div id="companies" class="section-container">
-            <section>
-                <h2>Company Campaign Inquiry</h2>
-                <form action="https://formspree.io/f/xgvadyrz" method="POST" class="inquiry-form">
-                    <h3>Start a Campaign</h3>
-                    <div class="form-group">
-                        <label for="company-name">Company Name</label>
-                        <input type="text" id="company-name" name="company_name" placeholder="Your company name" required>
-                    <div class="form-group">
-                        <label for="contact-person">Contact Person</label>
-                        <input type="text" id="contact-person" name="contact_person" placeholder="Full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email-company">Email Address</label>
-                        <input type="email" id="email-company" name="email_company" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="campaign-goal">Campaign Goal</label>
-                        <textarea id="campaign-goal" name="campaign_goal" rows="3" placeholder="What do you hope to achieve with this campaign?" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="campaign-budget">Campaign Budget</label>
-                        <input type="text" id="campaign-budget" name="campaign_budget" placeholder="Budget range (e.g., $5,000 - $10,000)">
-                    </div>
-                    <div class="form-group">
-                        <label for="preferred-platforms-select">Preferred Platforms</label>
-                        <div class="select-wrapper">
-                            <select id="preferred-platforms-select" name="preferred_platforms" required>
-                                <option value="" disabled selected>Select a platform...</option>
-                                <option value="Instagram">Instagram</option>
-                                <option value="TikTok">TikTok</option>
-                                <option value="YouTube">YouTube</option>
-                                <option value="Facebook">Facebook</option>
-                                <option value="Twitter/X">Twitter/X</option>
-                                <option value="LinkedIn">LinkedIn</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <input type="text" id="other-platform-input" name="other_platform" placeholder="Please specify other platform" style="display: none; margin-top: 10px;">
-                    </div>
-                    <div class="form-group">
-                        <label for="additional-notes">Additional Notes</label>
-                        <textarea id="additional-notes" name="additional_notes" rows="4" placeholder="Any other information you'd like to share."></textarea>
-                    </div>
-                    <button type="submit" class="btn">Submit Campaign Inquiry</button>
-                    <p class="thank-you-message" style="display:none;">Thank you for your submission! We will contact you soon.</p>
-                </form>
-            </section>
-        </div>
+h1, h2, h3, h4 {
+    color: #ffffff;
+}
 
-        <div id="influencers" class="section-container">
-            <section>
-                <h2>Influencer Application</h2>
-                <form action="https://formspree.io/f/xeoankvg" method="POST" class="application-form">
-                    <h3>Join Our Network</h3>
-                    <div class="form-group">
-                        <label for="influencer-name">Full Name</label>
-                        <input type="text" id="influencer-name" name="influencer_name" placeholder="Your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email-influencer">Email Address</label>
-                        <input type="email" id="email-influencer" name="email_influencer" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="social-media-handles">Social Media Handles</label>
-                        <input type="text" id="social-media-handles" name="social_media_handles" placeholder="@username (separate multiple handles with commas)" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="primary-platform-select">Primary Platform</label>
-                        <div class="select-wrapper">
-                            <select id="primary-platform-select" name="primary_platform" required>
-                                <option value="" disabled selected>Select a platform...</option>
-                                <option value="Instagram">Instagram</option>
-                                <option value="TikTok">TikTok</option>
-                                <option value="YouTube">YouTube</option>
-                                <option value="Facebook">Facebook</option>
-                                <option value="Twitter/X">Twitter/X</option>
-                                <option value="Twitch">Twitch</option>
-                                <option value="Blog">Blog</option>
-                                <option value="Podcast">Podcast</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <input type="text" id="other-platform-input-influencer" name="other_platform" placeholder="Please specify other platform" style="display: none; margin-top: 10px;">
-                    </div>
-                    <div class="form-group">
-                        <label for="follower-count">Follower Count</label>
-                        <input type="text" id="follower-count" name="follower_count" placeholder="Approximate number of followers">
-                    </div>
-                     <div class="form-group">
-                        <label for="content-niche">Content Niche</label>
-                        <textarea id="content-niche" name="content_niche" rows="3" placeholder="What type of content do you create? (e.g., Beauty, Tech, Fitness)" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="additional-info">Additional Information</label>
-                        <textarea id="additional-info" name="additional_info" rows="4" placeholder="Tell us more about your content, audience, and previous brand collaborations"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Submit Application</button>
-                    <p class="thank-you-message" style="display:none;">Thank you for your submission! We will contact you soon.</p>
-                </form>
-            </section>
-        </div>
-    </main>
+.highlight {
+    color: #4CAF50; /* Green highlight */
+}
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="yuralink_logo.png" alt="YURALINK">
-                <p>Connecting influencers and brands for authentic, impactful collaborations in the digital landscape.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#companies">For Companies</a></li>
-                    <li><a href="#influencers">For Influencers</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <p>Email: info@yuralink.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 YURALINK. All rights reserved.</p>
-        </div>
-    </footer>
+/* Header & Navigation */
+header {
+    background-color: rgba(18, 18, 18, 0.8); /* Slightly transparent dark */
+    padding: 1rem 5%;
+    position: fixed; /* Sticky header */
+    width: 90%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Optional: blur effect */
+}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navLinks = document.querySelectorAll('header nav ul li a');
-            const sectionContainers = document.querySelectorAll('.section-container');
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-            // Function to hide all sections
-            function hideAllSections() {
-                sectionContainers.forEach(section => {
-                    section.style.display = 'none';
-                });
-            }
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffffff;
+}
 
-            // Function to show a specific section
-            function showSection(sectionId) {
-                const section = document.getElementById(sectionId);
-                if (section) {
-                    section.style.display = 'block';
-                }
-            }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
 
-            // Initially hide all sections except for the 'home' section
-            hideAllSections();
-            showSection('home');
+nav ul li {
+    margin-left: 2rem;
+}
 
-            // Add click event listeners to the navigation links
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const sectionId = this.dataset.section;
-                    hideAllSections();
-                    showSection(sectionId);
-                });
-    
-                // Basic script for smooth scrolling (optional)
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        // Check if target element exists before scrolling
-                        const targetElement = document.querySelector(targetId);
-                        if (targetElement) {
-                        }
-                    });
-                });
-    
-                // Handle form submissions
-                const forms = document.querySelectorAll('form');
-                forms.forEach(form => {
-                    form.addEventListener('submit', function (e) {
-                        const thankYouMessage = form.querySelector('.thank-you-message');
-                        if (thankYouMessage) {
-                            thankYouMessage.style.display = 'block'; // Show thank you message
-                        }
-                    });
-                });
-            });
+nav ul li a {
+    color: #e0e0e0;
+    font-weight: bold;
+}
 
-            // Add click event listeners to the CTA buttons
-            const ctaButtons = document.querySelectorAll('.cta-boxes .cta-box .btn');
-            ctaButtons.forEach(button => {
-                button.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const sectionId = this.dataset.section;
-                    hideAllSections();
-                    showSection(sectionId);
-                });
-            });
-            // Handle 'Other' platform input visibility
-            const platformSelect = document.getElementById('preferred-platforms-select');
-            const otherPlatformInput = document.getElementById('other-platform-input');
+nav ul li a:hover {
+    color: #4CAF50;
+    text-decoration: none;
+}
 
-            if (platformSelect && otherPlatformInput) {
-                platformSelect.addEventListener('change', function() {
-                    if (this.value === 'other') {
-                        otherPlatformInput.style.display = 'block';
-                        otherPlatformInput.required = true; // Make required if Other is selected
-                    } else {
-                        otherPlatformInput.style.display = 'none';
-                        otherPlatformInput.required = false; // Not required if other option selected
-                        otherPlatformInput.value = ''; // Clear the value if hidden
-                    }
-                });
-            }
-            // Handle 'Other' platform input visibility for Influencer form
-            const platformSelectInfluencer = document.getElementById('primary-platform-select');
-            const otherPlatformInputInfluencer = document.getElementById('other-platform-input-influencer');
+/* Main Content Area */
+main {
+    padding-top: 80px; /* Adjust based on header height */
+}
 
-            if (platformSelectInfluencer && otherPlatformInputInfluencer) {
-                platformSelectInfluencer.addEventListener('change', function() {
-                    if (this.value === 'other') {
-                        otherPlatformInputInfluencer.style.display = 'block';
-                        otherPlatformInputInfluencer.required = true; // Make required if Other is selected
-                    } else {
-                        otherPlatformInputInfluencer.style.display = 'none';
-                        otherPlatformInputInfluencer.required = false; // Not required if other option selected
-                        otherPlatformInputInfluencer.value = ''; // Clear the value if hidden
-                    }
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+section {
+    padding: 60px 5%;
+    text-align: center;
+    min-height: 70vh; /* Give sections some height */
+    border-bottom: 1px solid #333; /* Separator */
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9)), url('placeholder-bg.jpg'); /* Add a background image later */
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.cta-boxes {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cta-box {
+    background-color: rgba(30, 30, 30, 0.8); /* Darker box background */
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+.cta-box .icon {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    display: block;
+    color: #4CAF50;
+    /* Placeholder for actual icons */
+}
+
+.cta-box h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    text-decoration: none;
+}
+
+
+/* Footer */
+footer {
+    background-color: #1c1c1c; /* Slightly lighter dark */
+    color: #a0a0a0;
+    padding: 40px 5%;
+    margin-top: 40px; /* Space above footer */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Handle smaller screens */
+    gap: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2rem;
+}
+
+.footer-logo h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+/* About Section */
+#about {
+    background-color: #1a1a1a; /* Slightly different dark shade */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack mission and why-choose */
+    align-items: center; /* Center content */
+    gap: 3rem;
+    max-width: 900px; /* Limit width */
+    margin: 0 auto; /* Center the container */
+    text-align: left; /* Align text left within the boxes */
+}
+
+.mission, .why-choose {
+    background-color: #222; /* Box background */
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    width: 100%; /* Take full width of container */
+}
+
+.mission h3, .why-choose h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8em;
+    color: #ffffff;
+}
+
+.why-choose .features {
+    display: flex;
+    justify-content: space-around; /* Space out feature boxes */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.feature-box {
+    background-color: #2a2a2a; /* Slightly lighter box */
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1; /* Allow boxes to grow */
+    min-width: 200px; /* Minimum width before wrapping */
+    border: 1px solid #555;
+}
+
+.feature-box .icon {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    display: block;
+    color: #4CAF50;
+    /* Placeholder for actual icons */
+}
+
+/* Initially hide all sections except home */
+.section-container {
+    display: none;
+}
+
+/* Logo Styling */
+.logo img {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    display: block; /* Remove any extra text spacing */
+}
+
+.footer-logo img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+    display: block; /* Remove any extra text spacing */
+}
+
+/* Forms General */
+.inquiry-form, .application-form { /* Apply to both forms */
+    max-width: 600px;
+    margin: 2rem auto; /* Center form */
+    padding: 2rem;
+    background-color: #222; /* Dark background for form */
+    border-radius: 8px;
+    border: 1px solid #444;
+    text-align: left; /* Align labels/inputs left */
+}
+
+.inquiry-form h3, .application-form h3 { /* Form sub-heading */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-size: 1.6em;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select { /* Added select here */
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    background-color: #333; /* Dark input background */
+    color: #e0e0e0; /* Light input text */
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+    font-size: 1em;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group input[type="number"]::placeholder,
+.form-group textarea::placeholder,
+.form-group select::placeholder { /* Added select here (though less common) */
+    color: #888; /* Placeholder text color */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resize */
+    min-height: 80px;
+}
+
+/* Center the submit button */
+.inquiry-form button[type="submit"],
+.application-form button[type="submit"] {
+    display: block; /* Make it block to center with margin */
+    width: auto; /* Adjust width automatically */
+    margin: 1rem auto 0; /* Center horizontally */
+    padding: 0.8rem 2rem; /* Adjust padding */
+}
+
+.feature-box h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2em;
+}
+
+.footer-links h4, .footer-contact h4 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Custom Select Dropdown Styling */
+.select-wrapper {
+    position: relative;
+    display: inline-block; /* Or block if you want it full width like inputs */
+    width: 100%; /* Match input width */
+}
+
+.select-wrapper select {
+    /* Inherit base styles */
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+/* Increase specificity */
+/* Remove default appearance */
+-webkit-appearance: none !important;
+-moz-appearance: none !important;
+appearance: none !important;
+    appearance: none;
+
+    /* Add padding for custom arrow */
+    padding-right: 2.5rem; /* Adjust as needed */
+    cursor: pointer;
+}
+
+/* Add custom arrow */
+.select-wrapper::after {
+    /* content: '\\25BC';  Unicode down arrow character */
+    position: absolute;
+    top: 50%;
+    right: 1rem; /* Position arrow */
+    transform: translateY(-50%);
+    /* font-size: 1em; */
+    color: #e0e0e0; /* Arrow color */
+    pointer-events: none; /* Prevent arrow from interfering with select click */
+    z-index: 1;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23e0e0e0'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Style for the 'Other' input (already inherits from general input rule) */
+#other-platform-input {
+    /* Add any specific styles if needed, e.g., margin */
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+    color: #a0a0a0;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9em;
+    padding-top: 1rem;
+}
