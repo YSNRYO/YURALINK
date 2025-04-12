@@ -102,8 +102,18 @@
                         <input type="text" id="campaign-budget" name="campaign_budget" placeholder="Budget range (e.g., $5,000 - $10,000)">
                     </div>
                     <div class="form-group">
-                        <label for="preferred-platforms">Preferred Platforms</label>
-                        <input type="text" id="preferred-platforms" name="preferred_platforms" placeholder="Instagram, TikTok, YouTube, etc.">
+                        <label for="preferred-platforms-select">Preferred Platforms</label>
+                        <select id="preferred-platforms-select" name="preferred_platforms" required>
+                            <option value="" disabled selected>Select a platform...</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="TikTok">TikTok</option>
+                            <option value="YouTube">YouTube</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Twitter/X">Twitter/X</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <input type="text" id="other-platform-input" name="other_platform" placeholder="Please specify other platform" style="display: none; margin-top: 10px;">
                     </div>
                     <div class="form-group">
                         <label for="additional-notes">Additional Notes</label>
@@ -247,7 +257,23 @@
                     showSection(sectionId);
                 });
             });
-        });
+            // Handle 'Other' platform input visibility
+            const platformSelect = document.getElementById('preferred-platforms-select');
+            const otherPlatformInput = document.getElementById('other-platform-input');
+
+            if (platformSelect && otherPlatformInput) {
+                platformSelect.addEventListener('change', function() {
+                    if (this.value === 'other') {
+                        otherPlatformInput.style.display = 'block';
+                        otherPlatformInput.required = true; // Make required if Other is selected
+                    } else {
+                        otherPlatformInput.style.display = 'none';
+                        otherPlatformInput.required = false; // Not required if other option selected
+                        otherPlatformInput.value = ''; // Clear the value if hidden
+                    }
+                });
+            }
+        }); // End of DOMContentLoaded listener
     </script>
 </body>
 </html>
