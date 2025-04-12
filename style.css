@@ -287,7 +287,8 @@ footer {
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="number"],
-.form-group textarea {
+.form-group textarea,
+.form-group select { /* Added select here */
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #555;
@@ -301,7 +302,8 @@ footer {
 .form-group input[type="text"]::placeholder,
 .form-group input[type="email"]::placeholder,
 .form-group input[type="number"]::placeholder,
-.form-group textarea::placeholder {
+.form-group textarea::placeholder,
+.form-group select::placeholder { /* Added select here (though less common) */
     color: #888; /* Placeholder text color */
 }
 
